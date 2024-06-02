@@ -16,9 +16,9 @@ class Tweet(models.Model):
 	def get_absolute_url(self):
 		return reverse('tweets:detail', kwargs={'pk': self.pk})
 
-	# def clean(self, *args, **kwargs):
-	# 	content = self.content
-	# 	if "fuck" in content:
-	# 		raise ValidationError("Cannot have offensive content")
+	def clean(self, *args, **kwargs):
+	 	content = self.content
+	 	if "fuck" in content:
+	 		raise ValidationError("Cannot have offensive content")
 
-	# 	return super().clean()
+	 	return super().clean()

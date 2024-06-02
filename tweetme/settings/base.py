@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-
 from django.urls import reverse_lazy
 from dotenv import load_dotenv, find_dotenv
 
